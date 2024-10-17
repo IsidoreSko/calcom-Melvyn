@@ -59,11 +59,11 @@ function Calendar() {
   }
 
   return (
-    <div className="max-w-md mx-auto p-4  font-medium">
+    <div className="max-w-md p-4 mx-auto font-medium md:shrink md:basis-2/4 md:border-x md:border-x-gray-700">
       {/* En-tête avec le mois et les boutons de navigation */}
       <div className="flex mb-3">
         <h2 className="mr-auto text-white">
-          <span className=" text-white mr-3 uppercase">
+          <span className="mr-3 text-white uppercase ">
             {new Date(currentYear, currentMonth).toLocaleString("fr-FR", {
               month: "long",
             })}
@@ -78,7 +78,7 @@ function Calendar() {
       </div>
 
       {/* Noms des jours de la semaine */}
-      <div className="grid grid-cols-7 gap-4 text-center mb-2">
+      <div className="grid grid-cols-7 gap-4 mb-2 text-center md:text-sm md:gap-2 md:mb-7 md:mt-5">
         <div>LUN.</div>
         <div>MAR.</div>
         <div>MER.</div>
@@ -89,7 +89,7 @@ function Calendar() {
       </div>
 
       {/* Jours du mois */}
-      <div className="grid grid-cols-7 gap-4">{renderDays()}</div>
+      <div className="grid grid-cols-7 gap-4 md:gap-2">{renderDays()}</div>
     </div>
   );
 }
